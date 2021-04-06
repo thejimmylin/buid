@@ -9,7 +9,10 @@ class BUID:
     CONSONAT_CHARS = 'bcdfghjklmnpqrstvwxyz'
     SEPARATOR_CHARS = '-'
 
-    def __init__(self, phrases=None, format='CVCV-CVCV-CVCV-CVCV', VOWEL_CHARS=None, CONSONAT_CHARS=None, SEPARATOR_CHARS=None):
+    def __init__(
+        self, phrases=None, format='CVCV-CVCV-CVCV-CVCV', VOWEL=None, CONSONAT=None,
+        SEPARATOR=None, VOWEL_CHARS=None, CONSONAT_CHARS=None, SEPARATOR_CHARS=None,
+    ):
         if not format:
             raise ValueError("The format can't be empty.")
         self.VOWEL_CHARS = VOWEL_CHARS if VOWEL_CHARS else self.VOWEL_CHARS
@@ -48,4 +51,4 @@ class BUID:
         return self.phrases
 
     def __repr__(self):
-        return f"{self.__class__.__name__}('{self.phrases}', '{self.format}')"
+        return f"{self.__class__.__name__}({self.phrases.__repr__()}, {self.format.__repr__()})"
