@@ -1,5 +1,5 @@
 import unittest
-from .buid import BUID
+from buid import BUID
 
 
 class TestStringMethods(unittest.TestCase):
