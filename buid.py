@@ -48,4 +48,4 @@ class BUID:
         return self.phrases
 
     def __repr__(self):
-        return f"{self.__class__.__name__}('{self.phrases}')"
+        return f"{self.__class__.__name__}('{self.phrases}', '{self.format}')"
