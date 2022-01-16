@@ -12,6 +12,9 @@ def get_char(char_type, separator="-"):
         return random.choice(consonat_chars)
     if char_type == "-":
         return separator
+    raise ValueError(
+        'Invalid `char_type`. It should be `"v"`, `"c"` or `"-"`.'
+    )
 
 
 def get_muid(char_types="cvcv-cvcv-cvcv-cvcv", separator="-"):
